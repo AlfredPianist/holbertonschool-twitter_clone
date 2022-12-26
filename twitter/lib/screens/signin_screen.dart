@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-// import 'package:twitter/screens/forgot_password_screen.dart';
-// import 'package:twitter/screens/home_screen.dart';
-// import 'package:twitter/screens/signup_screen.dart';
+import 'package:twitter/screens/forgot_password_screen.dart';
+import 'package:twitter/screens/home_screen.dart';
+import 'package:twitter/screens/signup_screen.dart';
 import 'package:twitter/widgets/entry_field.dart';
 import 'package:twitter/widgets/flat_button.dart';
 
@@ -68,14 +68,28 @@ class _SignInState extends State<SignIn> {
             Center(
               child: CustomFlatButton(
                 label: "Submit",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HomeScreen(),
+                    ),
+                  );
+                },
               ),
             ),
             const SizedBox(
               height: 50,
             ),
             GestureDetector(
-              onTap: (() {}),
+              onTap: (() {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SignUp(),
+                  ),
+                );
+              }),
               child: Center(
                 child: Text('Sign up',
                     style: GoogleFonts.mulish(
@@ -89,7 +103,14 @@ class _SignInState extends State<SignIn> {
               height: 30,
             ),
             GestureDetector(
-              onTap: (() {}),
+              onTap: (() {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ForgetPassword(),
+                  ),
+                );
+              }),
               child: Center(
                 child: Text(
                   'Forget password?',
