@@ -48,6 +48,16 @@ class UsersSearchResultsWidget extends StatelessWidget {
           fontSize: 22,
         ),
       ),
+      trailing: printCheckmark(isVerified),
     );
+  }
+
+  ImageIcon? printCheckmark(bool isVerified) {
+    const checkmark = ImageIcon(
+        NetworkImage(
+            'https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg'),
+        size: 30,
+        color: Colors.blue);
+    return isVerified ? checkmark : null;
   }
 }
