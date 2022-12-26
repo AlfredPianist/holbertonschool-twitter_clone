@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:twitter/providers/share_state.dart';
+import 'package:twitter/screens/chats_screen.dart';
 import 'package:twitter/screens/home_screen.dart';
 import 'package:twitter/screens/notifications_screen.dart';
 import 'package:twitter/screens/search_screen.dart';
@@ -17,8 +18,8 @@ class _BottomBarMenuState extends State<BottomBarMenu> {
   final List<Widget> screens = [
     const HomeScreen(),
     const SearchScreen(),
-    // const NotificationsScreen(),
-    // const ChatsScreen(),
+    const NotificationsScreen(),
+    const ChatsScreen(),
   ];
   @override
   Widget build(BuildContext context) {
